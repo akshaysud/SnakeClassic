@@ -2,6 +2,14 @@ language: objective-c
 
 osx_image: xcode9.2	
 
+notifications:
+  on_success: never 
+   on_failure: always
+  
+branches:
+  only:
+    - master
+
 env:
   global:
     - PROJECT=Snake.xcodeproj
@@ -15,4 +23,3 @@ script:
   - set -o pipefail
   - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
   - xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme "$SCHEME" CODE_SIGNING_REQUIRED=NO
-
