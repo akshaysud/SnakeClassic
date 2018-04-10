@@ -8,8 +8,9 @@ env:
     - PROJECT=Snake.xcodeproj
 
 matrix:
- - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator" ACTION="build"
- - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator" ACTION="test"
+  include:
+    - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator" ACTION="build"
+    - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator" ACTION="test"
     
 script:
   - set -o pipefail
