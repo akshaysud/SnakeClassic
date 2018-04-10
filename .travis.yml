@@ -21,5 +21,4 @@ matrix:
     
 script:
   - set -o pipefail
- # - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
   - xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme "$SCHEME" CODE_SIGNING_REQUIRED=NO
