@@ -1,13 +1,18 @@
 language: objective-c 
 osx_image: xcode9.2	
-xcode_project: Snake.xcodeproj
-xcode_scheme: SnakeUITests
-xcode_sdk: iphonesimulator
+#xcode_project: Snake.xcodeproj
+#xcode_scheme: SnakeUITests
+#xcode_sdk: iphonesimulator
+env:
+  global:
+    - PROJECT=Snake.xcodeproj
+
+matrix:
+ - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator" ACTION="build"
+ - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator" ACTION="test"
+    
 script:
   - set -o pipefail
   - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
-  - xcodebuild build -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone SE" -project Snake.xcodeproj -scheme Snake CODE_SIGNING_REQUIRED=NO
-  - xcodebuild test -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone SE" -project Snake.xcodeproj -scheme SnakeUITests CODE_SIGNING_REQUIRED=NO 
-
-#script:
- #   - xcodebuild clean build -sdk iphonesimulator8.4 -project Snake.xcodeproj -scheme SnakeUITests CODE_SIGNING_REQUIRED=NO
+  - xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme "$SCHEME" CODE_SIGNING_REQUIRED=NO
+#  - xcodebuild test -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone SE" -project Snake.xcodeproj -scheme SnakeUITests CODE_SIGNING_REQUIRED=NO 
