@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Snake.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<true/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>A08C3AB36762BA502C122FEBFB6B524E61B6B06E</string>
+				<key>dateExpires</key>
+				<string>11/04/19</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>bitcode</key>
+					<true/>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A08C3AB36762BA502C122FEBFB6B524E61B6B06E</string>
+						<key>dateExpires</key>
+						<string>11/04/19</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>SnakeEngine.framework</string>
+					<key>symbols</key>
+					<true/>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>PSKQG74426</string>
+						<key>name</key>
+						<string>Luke Te Hira</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>PSKQG74426..com.test.snake</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>PSKQG74426</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>PSKQG74426..com.test.snake</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Snake.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>c8a384da-439a-4ed3-a897-9d77b517c36e</string>
+				<key>name</key>
+				<string>lukebae</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>PSKQG74426</string>
+				<key>name</key>
+				<string>Luke Te Hira</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

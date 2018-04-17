@@ -1045,7 +1045,7 @@
 				DEVELOPMENT_TEAM = PSKQG74426;
 				INFOPLIST_FILE = Snake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = greenpixels.net.Snake;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.test.snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1059,7 +1059,7 @@
 				DEVELOPMENT_TEAM = PSKQG74426;
 				INFOPLIST_FILE = Snake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = greenpixels.net.Snake;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.test.snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

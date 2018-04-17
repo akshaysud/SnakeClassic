@@ -1,0 +1,8 @@
+app_identifier(".com.test.snake") # The bundle identifier of your app
+apple_id("l_tehira@hotmail.com") # Your Apple email address
+
+itc_team_id("117346825") # iTunes Connect Team ID
+team_id("PSKQG74426") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
