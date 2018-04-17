@@ -1,36 +1,32 @@
-language: objective-c 
-
-osx_image: xcode9.2	
-
+language: objective-c
+osx_image: xcode9.2
 before_script:
-  - chmod +x scripts/travis/add-key.sh
-  - chmod +x scripts/travis/remove-key.sh
-  - chmod +x scripts/travis/testflight.sh
-
+- chmod +x scripts/travis/add-key.sh
+- chmod +x scripts/travis/remove-key.sh
+- chmod +x scripts/travis/testflight.sh
 notifications:
-  on_success: never 
+  on_success: never
   on_failure: always
-  
 branches:
   only:
-    - master
-
+  - master
 env:
   global:
-    - PROJECT=Snake.xcodeproj
-    - PROFILE_NAME=lukebae
-
+  - PROJECT=Snake.xcodeproj
+  - PROFILE_NAME=lukebae
+  - secure: jFlkR270JK86hZbco4ozyyciK0c8BkHGtFOWs1zOgM6c8Y7MXUUA95K6YQeQ2Pdq0LEVtJ4EXBIdvWiXrnfcQVlf0CUqkN8YndpFuD9OO3lNdspojUthN9TvctFbYWFrhQdd12nVfdje/pQdh2SlMI6RSU3dpGHul0q0jD7kBB7qkKQTvs6gnhHhA0zOCXEsKOZPTBLSTdtJmYFRrQZ/H0iv+ctvAj5y/4d9CKE6pkwjAlbtDeP/ng83gdjeT1itJMk0ZaaEoUUOYgVxDTJeTOFT+upDCxkCy0h/TMOeBoP0CJ0s4AdGBqN1uYTdABZ0/YShBjVqif9AlgBmdnNraTz5FcUiY96IN+BfBWCzGrRw6YfXMJGXV81sFDg2YTVBVWkSnr/u+8FsJFpcI2MhE8rccURkgfsJnWhoO3/DfAmxF1u5J9kvNFvXzznIbDMBVkLtxvqkiH4IDI2Rvp/FEMqOn9Lkf3eC/YpeQIikE/9vrq6vK8b6S+W+qspJfc9YBd4KuaYCjneai1zhkfrCk/mPZ/CCgBhnojTANKlRo7ttIicFfHHboBzx9WZKkubajS/yRNYiCkwlbTzQzfCidGFrH2ImL1o/FcS6z++PV09yvdi6t+3EV0x2kgIcFGj5Js1ny1wtJpbbWs10jAYp+oWrVDONHvBn7xGmJtTZeUU=
+  - secure: MjPW7RyAyCId9afVNIGZaGCW6xwtnXWtnZlGiKmWrjxj7VKaND9W5Hsfw8r8CrO3MHiKH9OveDO/s7jf9lJt9FqMv5DBgY/AVFXqhTGKDhfFjPYwb4is2kHwzSaQCTo4/QF4jaACWmSd5TUfd0m++NfD9z9oeqGDl/mOIjhOsSrRaqObP28Iq31a0nBMs3yEdTN+g9eX1e4NEayt4+Kq6ycgtqVWze4B/YHweBVf0gx+tqxskx/XUaP/DQ22+1hwj34g270/vUAgC++QB6M3udSaHfC+pXkVqfHoXWFwg7S6BC6yzCTZ1p5KkLlZQSxYeotreVWF/GifuXlAxXLgqWr5XpcztwGlGyNktaZbeca7tF9EZ+Mecy9UJZ9Ehd9LvALdt6rpaWJFYSiJlkuYib9OLFvN1tyOuEUnI9xgQRcaxXGbk/QMZ6ItNOes+rVS5w8/5HnodFc7VwKNI0uRrSZ0NaQyT2ZL81TGjaHsGpsHwMobzXraUSyww0o3Hjmk5y5JRxCt0EDYZCB8zTFhvYd2oOIHehQEjNs8Ypm+JNmgLfRQ+c4P5VqENop1J2kx5RUlhuMH/faaBNFTPEpgGcNCBigFMdsmaR5yPuTAqPUtjndjxXCADhLlH4QOdgJWv41OYWyYPuVaCD5FDEGWyHlJrXr+Gql2JGuqnx2GHj8=
 matrix:
   include:
-    - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator" ACTION="build"
-    - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator" ACTION="test"
-    
+  - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator"
+      ACTION="build"
+  - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator"
+      ACTION="test"
 script:
-  - set -o pipefail
-  - xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme "$SCHEME" CODE_SIGNING_REQUIRED=NO
-  
+- set -o pipefail
+- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
+  "$SCHEME" CODE_SIGNING_REQUIRED=NO
 after_success:
-  - ./scripts/travis/testflight.sh
-
+- "./scripts/travis/testflight.sh"
 after_script:
-  - ./scripts/travis/remove-key.sh
+- "./scripts/travis/remove-key.sh"
