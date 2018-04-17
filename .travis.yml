@@ -2,6 +2,11 @@ language: objective-c
 
 osx_image: xcode9.2	
 
+before_script:
+  - chmod +x scripts/travis/add-key.sh
+  - chmod +x scripts/travis/remove-key.sh
+  - chmod +x scripts/travis/testflight.sh
+
 notifications:
   on_success: never 
   on_failure: always
@@ -13,6 +18,7 @@ branches:
 env:
   global:
     - PROJECT=Snake.xcodeproj
+    - PROFILE_NAME=lukebae
 
 matrix:
   include:
@@ -22,3 +28,9 @@ matrix:
 script:
   - set -o pipefail
   - xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme "$SCHEME" CODE_SIGNING_REQUIRED=NO
+  
+after_success:
+  - ./scripts/travis/testflight.sh
+
+after_script:
+  - ./scripts/travis/remove-key.sh
