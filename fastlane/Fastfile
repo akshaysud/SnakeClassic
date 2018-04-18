@@ -19,26 +19,4 @@ platform :ios do
     build_app(scheme: "Snake")
     upload_to_testflight
   end
-  
-  desc "Release"
-  lane :release do
-  if is_ci
-  create_keychain(
-    name: "CI",
-    password: ENV["MATCH_PASSWORD"],
-    default_keychain: true,
-    unlock: true,
-    timeout: 3600,
-    add_to_search_list: true
-  )
-
-  match(
-    type: "appstore",
-    keychain_name: "CI",
-    keychain_password: ENV["MATCH_PASSWORD"],
-    readonly: true
-  )
-else
-  match(type: "appstore")
-    end
- end
+end
