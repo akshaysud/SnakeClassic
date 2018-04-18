@@ -22,12 +22,12 @@ matrix:
   include:
   - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator"
       ACTION="build"
-  - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator"
-      ACTION="test"
+ # - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="SnakeUITests" SDK="iphonesimulator"
+     # ACTION="test"
 
 script:
-#- set -o pipefail
-#- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
-# "$SCHEME" CODE_SIGNING_REQUIRED=NO
+- set -o pipefail
+- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
+ "$SCHEME" CODE_SIGNING_REQUIRED=NO
 - bundle exec fastlane beta
 
