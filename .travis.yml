@@ -26,7 +26,7 @@ matrix:
       ACTION="test"
 
 script:
-- set -o pipefail
-- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
-  "$SCHEME" CODE_SIGNING_REQUIRED=NO
-
+#- set -o pipefail
+#- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
+ # "$SCHEME" CODE_SIGNING_REQUIRED=NO
+- bundle exec fastlane beta
