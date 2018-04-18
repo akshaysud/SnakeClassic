@@ -28,6 +28,6 @@ matrix:
 script:
 #- set -o pipefail
 #- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
- "$SCHEME" CODE_SIGNING_REQUIRED=NO
+# "$SCHEME" CODE_SIGNING_REQUIRED=NO
 - bundle exec beta
 
