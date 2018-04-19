@@ -11,7 +11,6 @@
 
 default_platform(:ios)
 xcversion(version: "9.2")
-xcode_select "/Applications/xcode9.2.app"
 
 platform :ios do
   desc "Upload App"
