@@ -10,7 +10,8 @@
 # update_fastlane
 
 default_platform(:ios)
-xcversion(version: "9.2") 
+xcversion(version: "9.2")
+xcode_select "/Applications/Xcode9.2.app"
 
 platform :ios do
   desc "Upload App"
