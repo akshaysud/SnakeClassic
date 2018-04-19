@@ -18,7 +18,7 @@ matrix:
   - env: DEST="platform=iOS Simulator,name=iPhone SE" SCHEME="Snake" SDK="iphonesimulator"
       ACTION="build"
 script:
-- set -o pipefail
-- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
-  "$SCHEME" CODE_SIGNING_REQUIRED=NO
+#- set -o pipefail
+#- xcodebuild "$ACTION" -sdk "$SDK" -destination "$DEST" -project "$PROJECT" -scheme
+  #"$SCHEME" CODE_SIGNING_REQUIRED=NO
 - bundle exec fastlane beta
