@@ -13,7 +13,7 @@
 export_options: {
   method: "app-store",
   provisioningProfiles: { 
-    ".com.test.snake" => "matchDevelopmentcomtestsnake.mobileprovision",
+    ".com.test.snake" => "matchDevelopmentcomtestsnake.mobileprovision"
   }
 }
 
