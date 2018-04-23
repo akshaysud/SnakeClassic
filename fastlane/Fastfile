@@ -32,7 +32,11 @@ platform :ios do
     readonly: true
   )
 else
-  match(type: "appstore")
+  match(
+    type: "appstore",
+    provisioningProfiles: { 
+    ".com.test.snake" => "matchDevelopmentcomtestsnake.mobileprovision"
+  })
 end
    upload_to_testflight
   end
