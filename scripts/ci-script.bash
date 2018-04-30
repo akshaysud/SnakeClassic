@@ -31,9 +31,9 @@ security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD i
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
-cp "./scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision" "~/Library/MobileDevice/Provisioning\ Profiles/"
 
-cp "./scripts/provisioning-profile/lukebae.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./scripts/provisioning-profile/lukebae.mobileprovision" "~/Library/MobileDevice/Provisioning\ Profiles/"
 
 echo "Archive Build"
 xcodebuild archive -workspace $TRAVIS_BUILD_DIR/Snake.xcodeproj/project.xcworkspace -scheme Snake -configuration Release -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive
