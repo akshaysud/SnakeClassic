@@ -37,3 +37,6 @@ cp "./scripts/provisioning-profile/lukebae.mobileprovision" ~/Library/MobileDevi
 
 echo "Archive Build"
 xcodebuild archive -workspace SnakeClassic/Snake.xcodeproj/project.xcworkspace -scheme Snake -configuration Release -derivedDataPath ./build -archivePath ./build/Products/SnakeClassic.xcarchive
+
+echo "Create IPA"
+xcodebuild -exportArchive -archivePath ./build/Products/SnakeClassic.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
