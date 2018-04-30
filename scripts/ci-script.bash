@@ -35,7 +35,7 @@ cp scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovi
 
 cp scripts/provisioning-profile/lukebae.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
 
-for entry in "~/Library/MobileDevice/Provisioning\ Profiles/*"
+for entry in ~/Library/MobileDevice/Provisioning\ Profiles/*
 do
   echo "$entry"
 done
