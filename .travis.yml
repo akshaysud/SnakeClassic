@@ -2,6 +2,9 @@ language: objective-c
 
 osx_image: xcode9.2
 
+before_install:
+ - chmod +x ./scripts/ci-script.bash
+
 -install:	
 - bundle install
 
