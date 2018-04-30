@@ -24,9 +24,7 @@ env:
   - PROJECT=Snake.xcodeproj
   - PROFILE_NAME=lukebae
   - FASTLANE_PASSWORD: jrczpaP8rKRbrrbaWC3bYqWqgNE5xosDyE0xe4WAe+CQQ21gDO+G+GPqSSjEnbHYIF63cc4jleCyHkgl8zZehrLxsZIwcRefQ0xlsQtoI5BCXJ9DpCpQa6eYN8jSIfyjfazr7Bc2459Ns9pr/yz1TqOee7ae0DcbJZ8hWyYMWxrPKmcwoJnxfkdFQJUlf8EEV3fAtCCcmSjV0Y7arAtv++aPs+gvhEp7AsnYq/ZYCEdeM2giwBYBbr9rA7ROpfmHxKYQvvowu/GvFbhrX6Oe9J0BXLCV6KSiDRcOajQmkT8vuOQTGY0fiCZvW5FKeSHib+9BbDAzx85UkZ1SNLGYHiaxySQ6mQugTt7oBw9TRwXxsYMsaZGIE7WUsCAKZrD960E6q9BpDt39sE80UxIFrd3ydlkO7MooXuiPHTvAOkDOCV1H8Oai4j3l3vkm5GAtTnaefq5mENu41Ur7bQJ2561Od6RAW18Fn+D8wq8gYy8qWzycWqdCQPXkRqWE8OM1K+I+lFbfi/aognvQMT6dg+UHem0vTO5ZDM0Qttee2UfshDKg0gaG0237HYuaYbHUykg5MfqF71cU1otdwexJz7CxF8CpgrO2KlgEjwWqWQsdYqFnOjaTIpQPZxN6L8tdjc7QPpCejPvttWivAuKZvA3W3yskdBwiMutSF7TJguo=
-  - DISTRIBUTION_LISTS="[Comma separated Testflight distributions lists]"
   - APPNAME="My App"
-  - PROFILE_NAME="lukebae.mobileprovision"
 
 matrix:
   include:
