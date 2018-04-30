@@ -22,15 +22,3 @@ xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APPNAME.app" -o "$OUTPU
 RELEASE_NOTES="This version was uploaded automagically by Travis\nTravis Build number: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
 zip -r -9 "$OUTPUTDIR/$APPNAME.app.dSYM.zip" "$OUTPUTDIR/$APPNAME.app.dSYM"
-
-echo "********************"
-echo "*    Uploading     *"
-echo "********************"
-curl http://testflightapp.com/api/builds.json \
-  -F file="@$OUTPUTDIR/$APPNAME.ipa" \
-  -F dsym="@$OUTPUTDIR/$APPNAME.app.dSYM.zip" \
-  -F api_token="$API_TOKEN" \
-  -F team_token="$TEAM_TOKEN" \
-  -F distribution_lists=$DISTRIBUTION_LISTS \
-  -F notes="$RELEASE_NOTES" -v \
-  -F notify="FALSE"
