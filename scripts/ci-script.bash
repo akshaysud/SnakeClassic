@@ -36,7 +36,7 @@ cp "./scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobilepr
 cp "./scripts/provisioning-profile/lukebae.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
 echo "Archive Build"
-xcodebuild archive -workspace project.xcworkspace -scheme Snake -configuration Release -derivedDataPath ./build -archivePath ./build/Products/SnakeClassic.xcarchive
+xcodebuild archive -workspace project.xcworkspace -scheme Snake -configuration Release -derivedDataPath ./build -archivePath SnakeClassic.xcarchive
 
 echo "Create IPA"
-xcodebuild -exportArchive -archivePath ./build/Products/SnakeClassic.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
+xcodebuild -exportArchive -archivePath SnakeClassic.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath ./build/Products/IPA
