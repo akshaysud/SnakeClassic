@@ -23,7 +23,8 @@ platform :ios do
       )
     upload_to_testflight(
                         ipa: "/Users/travis/build/akshaysud/SnakeClassic/IPA/Snake.ipa",
-                        skip_submission: true
-                        )
+                        skip_submission: true,
+                        skip_waiting_for_build_processing:true
+      )
   end
 end
