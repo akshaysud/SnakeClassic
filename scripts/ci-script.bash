@@ -1,7 +1,7 @@
 # Development
 #openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-cert.cer.enc -d -a -out scripts/certs/development-cert.cer
 #openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-key.p12.enc -d -a -out scripts/certs/development-key.p12
-o#penssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision.enc -d -a -out scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision
+#penssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision.enc -d -a -out scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision
 
 # Distribution
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-cert.cer.enc -d -a -out scripts/certs/distribution-cert.cer
