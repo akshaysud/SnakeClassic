@@ -21,8 +21,6 @@ security unlock-keychain -p $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain
 security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
 
 security import ./scripts/certs/AppleWWDRCA.cer -k ios-build.keychain -A
-#security import ./scripts/certs/development-cert.cer -k ios-build.keychain -A
-#security import ./scripts/certs/development-key.p12 -k ios-build.keychain -P $SECURITY_PASSWORD -A
 security import ./scripts/certs/distribution-cert.cer -k ios-build.keychain -A
 security import ./scripts/certs/distribution-key.p12 -k ios-build.keychain -P $SECURITY_PASSWORD -A
 
@@ -36,6 +34,7 @@ cp scripts/provisioning-profile/travisdisrt.mobileprovision ~/Library/MobileDevi
 for entry in ~/Library/MobileDevice/Provisioning\ Profiles/*
 do
   echo "$entry"
+  echo "Found these profiles ####################"
 done
 
 echo "Archive Build"
