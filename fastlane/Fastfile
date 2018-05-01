@@ -15,8 +15,8 @@ xcversion(version: "9.2")
 platform :ios do
   desc "Upload App"
   lane :beta do
-    increment_build_number build_number: 4
-    increment_version_number release_task: 2.5
+    increment_build_number (build_number: "4")
+    increment_version_number (version_number: 2.5)
     upload_to_testflight(
                         ipa: "/Users/travis/build/akshaysud/SnakeClassic/IPA/Snake.ipa",
                         skip_submission: true
