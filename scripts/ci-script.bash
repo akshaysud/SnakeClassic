@@ -44,4 +44,4 @@ echo "Archive Build"
 xcodebuild archive -workspace $TRAVIS_BUILD_DIR/Snake.xcodeproj/project.xcworkspace -scheme Snake -configuration Release -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive
 
 echo "Create IPA"
-xcodebuild -exportArchive -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive -exportPath $TRAVIS_BUILD_DIR/IPA
+xcodebuild -exportArchive -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive -exportOptionsPlist ./scripts/exportOptions-Enterprise.plist -exportPath $TRAVIS_BUILD_DIR/IPA
