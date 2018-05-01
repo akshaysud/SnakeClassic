@@ -1044,6 +1044,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = PSKQG74426;
 				INFOPLIST_FILE = Snake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1052,6 +1053,7 @@
 				PROVISIONING_PROFILE = "dc3e9534-d95f-4561-9be2-fb0e1cab4b5e";
 				PROVISIONING_PROFILE_SPECIFIER = travisdisrt;
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1062,6 +1064,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = PSKQG74426;
 				INFOPLIST_FILE = Snake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1070,6 +1073,7 @@
 				PROVISIONING_PROFILE = "dc3e9534-d95f-4561-9be2-fb0e1cab4b5e";
 				PROVISIONING_PROFILE_SPECIFIER = travisdisrt;
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
