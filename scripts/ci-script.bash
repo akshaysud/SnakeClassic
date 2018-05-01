@@ -3,6 +3,11 @@
 #openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-key.p12.enc -d -a -out scripts/certs/development-key.p12
 #penssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision.enc -d -a -out scripts/provisioning-profile/742a6cf5-8f0a-481c-9c06-a66d48e99006.mobileprovision
 
+echo "Changing version number"
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "Snake/Info.plist"
+
+echo $TRAVIS_BUILD_NUMBER
+
 # Distribution
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-cert.cer.enc -d -a -out scripts/certs/distribution-cert.cer
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-key.p12.enc -d -a -out scripts/certs/distribution-key.p12
@@ -36,9 +41,6 @@ do
   echo "$entry"
   echo "Found these profiles ####################"
 done
-
-echo "Changing version number"
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "Snake/Info.plist"
  
 echo "Archive Build"
 xcodebuild archive -workspace $TRAVIS_BUILD_DIR/Snake.xcodeproj/project.xcworkspace -scheme Snake -configuration Release -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive
