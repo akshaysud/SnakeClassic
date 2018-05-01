@@ -37,6 +37,9 @@ do
   echo "Found these profiles ####################"
 done
 
+echo "Changing version number"
+agvtool new-marketing-version $TRAVIS_BUILD_NUMBER  
+ 
 echo "Archive Build"
 xcodebuild archive -workspace $TRAVIS_BUILD_DIR/Snake.xcodeproj/project.xcworkspace -scheme Snake -configuration Release -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive
 
