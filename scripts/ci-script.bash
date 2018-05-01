@@ -38,7 +38,7 @@ do
 done
 
 echo "Changing version number"
-agvtool new-marketing-version $TRAVIS_BUILD_NUMBER  
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "Snake/Info.plist"
  
 echo "Archive Build"
 xcodebuild archive -workspace $TRAVIS_BUILD_DIR/Snake.xcodeproj/project.xcworkspace -scheme Snake -configuration Release -archivePath $TRAVIS_BUILD_DIR/SnakeClassic.xcarchive
