@@ -1,4 +1,4 @@
-app_identifier(".com.test.snake") # The bundle identifier of your app
+app_identifier("snakeysnake") # The bundle identifier of your app
 apple_id("l_tehira@hotmail.com") # Your Apple email address
 
 itc_team_id("117346825") # iTunes Connect Team ID
