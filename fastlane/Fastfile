@@ -16,7 +16,6 @@ platform :ios do
   desc "Upload App"
   lane :beta do
     increment_build_number
-    increment_version_number
     upload_to_testflight(
                         ipa: "/Users/travis/build/akshaysud/SnakeClassic/IPA/Snake.ipa",
                         skip_submission: true
