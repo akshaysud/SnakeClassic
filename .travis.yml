@@ -10,3 +10,4 @@ before_install:
 
 script:
 - ./scripts/ci-script.bash
+- bundle exec fastlane beta
