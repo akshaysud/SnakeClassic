@@ -15,8 +15,7 @@ xcversion(version: "9.2")
 platform :ios do
   desc "Upload App"
   lane :beta do
-    build_number = Time.new.strftime("%Y.%m.%d")
-    increment_build_number build_number: build_number
+    increment_build_number(build_number: "3")
     upload_to_testflight(
                         ipa: "/Users/travis/build/akshaysud/SnakeClassic/IPA/Snake.ipa",
                         skip_submission: true
