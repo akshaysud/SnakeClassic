@@ -15,7 +15,6 @@ xcversion(version: "9.2")
 platform :ios do
   desc "Upload App"
   lane :beta do
-   build_app(scheme: "Snake")
- #  upload_to_testflight
+   upload_to_testflight
   end
 end
